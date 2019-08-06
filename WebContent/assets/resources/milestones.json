@@ -1,0 +1,10 @@
+{
+	"Found ant-trail" 		: { "reached" : false},
+	"Found crystal" 		: { "reached" : false},
+	"Activated crystal" 	: { "reached" : false},
+	"Examined ant-hill" 	: { "reached" : false},
+	"Destroyed ant-hill"	: { "reached" : false},
+	"Picked-up crystal"		: { "reached" : false},
+	"Attacked by ants"		: { "reached" : false},
+	"Placed crystal"		: { "reached" : false}
+}

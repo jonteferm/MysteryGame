@@ -1,0 +1,441 @@
+{
+  "area1": [{
+    "type": "image",
+    "key": "area1",
+    "url": "assets/areas/area1/area1.png",
+    "overwrite": false
+  }],
+  "ui": [
+    {
+      "type": "image",
+      "key": "inventory",
+      "url": "assets/images/inventory.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "panel",
+      "url": "assets/images/panel.png",
+      "overwrite": false
+    },
+    {
+      "type": "bitmapFont",
+      "key": "font",
+      "textureURL": "assets/fonts/font_0.png",
+      "atlasURL": "assets/fonts/font.xml",
+      "xSpacing": 0,
+      "ySpacing": 0
+    },
+    {
+      "type": "bitmapFont",
+      "key": "smallFont",
+      "textureURL": "assets/fonts/smallFont_0.png",
+      "atlasURL": "assets/fonts/smallFont.xml",
+      "xSpacing": 0,
+      "ySpacing": 0
+    },
+    {
+      "type": "image",
+      "key": "pentagram",
+      "url": "assets/images/BurningPentagramAlpha.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "coronaAlfa",
+      "url": "assets/images/flares/coronaAlfa.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "mist",
+      "url": "assets/images/smoke/White puff/whitePuff00.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "spellbook-open",
+      "url": "assets/images/spellbook-open.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "pendulum",
+      "url": "assets/images/pendulum/pendulum.png",
+      "frameWidth": 518,
+      "frameHeight": 700,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "pendulumCircle",
+      "url": "assets/images/pendulum/pendulumCircle.png",
+      "frameWidth": 518,
+      "frameHeight": 700,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "arrow_back",
+      "url": "assets/images/direction_arrow/arrow_down.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "arrow_forward",
+      "url": "assets/images/direction_arrow/arrow_forward.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "arrow_left",
+      "url": "assets/images/direction_arrow/arrow_left.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "arrow_right",
+      "url": "assets/images/direction_arrow/arrow_right.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "krumilur_bottom_left",
+      "url": "assets/images/krumilur_bottom_left.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "krumilur_bottom_right",
+      "url": "assets/images/krumilur_bottom_right.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "krumilur_top_left",
+      "url": "assets/images/krumilur_top_left.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "krumilur_top_right",
+      "url": "assets/images/krumilur_top_right.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "examine_button",
+      "url": "assets/images/buttons/examine_button.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "drowse_button",
+      "url": "assets/images/buttons/drowse_button.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "spellcast_button",
+      "url": "assets/images/buttons/spellcast_button.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "transition_screen",
+      "url": "assets/images/transition_screen.png",
+      "overwrite": false
+    }
+  ],
+  "area2": [
+    {
+      "type": "image",
+      "key": "spellbook",
+      "url": "assets/images/spellbook.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2",
+      "url": "assets/areas/area2/area2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2p",
+      "url": "assets/areas/area2/area2,5.png",
+      "overwrite": false
+    }
+  ],
+  "area3": [
+    {
+      "type": "image",
+      "key": "area3_wicked",
+      "url": "assets/areas/area3/area3_wicked.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area3",
+      "url": "assets/areas/area3/area3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "kvinna_standard",
+      "url": "assets/images/kvinna_standard.png",
+      "overwrite": false
+    }
+  ],
+  "area4": [
+    {
+      "type": "image",
+      "key": "area4",
+      "url": "assets/areas/area4/area4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area4p",
+      "url": "assets/areas/area4/area4p.png",
+      "overwrite": false
+    }
+  ],
+  "area5": [
+    {
+      "type": "image",
+      "key": "area5_0",
+      "url": "assets/areas/area5/area5_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_1",
+      "url": "assets/areas/area5/area5_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "examinationObject",
+      "url": "assets/areas/area5/examinationObject.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "ant",
+      "url": "assets/images/ant.png",
+      "frameWidth": 100,
+      "frameHeight": 142,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "area5_1_glow",
+      "url": "assets/areas/area5/area5_1_glow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_glow",
+      "url": "assets/areas/area5/area5_2_glow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2",
+      "url": "assets/areas/area5/area5_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "ant_neutral",
+      "url": "assets/images/ant_neutral.png",
+      "frameWidth": 100,
+      "frameHeight": 142,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "area5_2_hole_1",
+      "url": "assets/areas/area5/area5_2_hole_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_hole_2",
+      "url": "assets/areas/area5/area5_2_hole_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_hole_3",
+      "url": "assets/areas/area5/area5_2_hole_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "kristall_topp",
+      "url": "assets/images/kristall_topp.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "kristall_topp_glowing",
+      "url": "assets/images/kristall_topp_glowing.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "ant_neutral_underside",
+      "url": "assets/images/ant_neutral_underside.png",
+      "frameWidth": 100,
+      "frameHeight": 142,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_1",
+      "url": "assets/areas/area5/area5_2_attack_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_2",
+      "url": "assets/areas/area5/area5_2_attack_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_3",
+      "url": "assets/areas/area5/area5_2_attack_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_4",
+      "url": "assets/areas/area5/area5_2_attack_4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_5",
+      "url": "assets/areas/area5/area5_2_attack_5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_6",
+      "url": "assets/areas/area5/area5_2_attack_6.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_7",
+      "url": "assets/areas/area5/area5_2_attack_7.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_2_attack_8",
+      "url": "assets/areas/area5/area5_2_attack_8.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_3",
+      "url": "assets/areas/area5/area5_3.png",
+      "overwrite": false
+    }
+  ],
+  "resources": [{
+    "type": "json",
+    "key": "milestones",
+    "url": "assets/resources/milestones.json",
+    "overwrite": false
+  }],
+  "area6": [
+    {
+      "type": "image",
+      "key": "area6_0",
+      "url": "assets/areas/area6/area6_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area6_0_wicked",
+      "url": "assets/areas/area6/area6_0_wicked.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area6_0_wicked_twist_1",
+      "url": "assets/areas/area6/area6_0_wicked_twist_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area6_0_wicked_twist_2",
+      "url": "assets/areas/area6/area6_0_wicked_twist_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area6_0_wicked_twist_3",
+      "url": "assets/areas/area6/area6_0_wicked_twist_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gubbe",
+      "url": "assets/areas/area6/gubbe.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gumma",
+      "url": "assets/areas/area6/gumma.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "karl",
+      "url": "assets/areas/area6/karl.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gumma_shadow",
+      "url": "assets/areas/area6/gumma_shadow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gubbe_shadow",
+      "url": "assets/areas/area6/gubbe_shadow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "karl_shadow",
+      "url": "assets/areas/area6/karl_shadow.png",
+      "overwrite": false
+    }
+  ],
+  "meta": {
+    "generated": "1564748705956",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}
