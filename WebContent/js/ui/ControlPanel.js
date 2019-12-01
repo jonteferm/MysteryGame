@@ -12,7 +12,7 @@ class ControlPanel extends Phaser.Sprite{
 	    this.game.add.existing(this);
 
 
-		this.addText("Welcome to the forest!");
+		//this.addText("Welcome to the forest!");
 		
 		this.examinationButton = new Button(this.game, 1150, 20, 'examine_button');
 		this.drowseButton = new Button(this.game, 1030, 20, 'drowse_button');

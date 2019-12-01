@@ -33,21 +33,18 @@ class DirectionArrows{
 		this.backArrow.inputEnabled = true;
 		
 		this.leftArrow.events.onInputDown.add(function(){
-			console.log(this.borderingAreas);
 			if(this.borderingAreas.left !== ''){
 				this.signals.newArea.dispatch(this.borderingAreas.left);
 			}
 		}, this);
 		
 		this.rightArrow.events.onInputDown.add(function(){
-			console.log(this.borderingAreas);
 			if(this.borderingAreas.right !== ''){
 				this.signals.newArea.dispatch(this.borderingAreas.right);
 			}
 		}, this);
 		
 		this.forwardArrow.events.onInputDown.add(function(){
-			console.log(this.borderingAreas);
 			if(this.borderingAreas.forward !== ''){
 				this.signals.newArea.dispatch(this.borderingAreas.forward);
 			}
@@ -55,7 +52,6 @@ class DirectionArrows{
 		}, this);
 		
 		this.backArrow.events.onInputDown.add(function(){
-			console.log(this.borderingAreas);
 			if(this.borderingAreas.back !== ''){
 				this.signals.newArea.dispatch(this.borderingAreas.back);
 			}

@@ -9,17 +9,35 @@ class NPC extends Phaser.Sprite {
 			questId: 0,
 			lines: [{
 				spoken: false,
-				line:  'Hi, my name is Lola.\nCan you kill the cultists in the graveyard so that\n I can visit my mothers grave?',
+				line:  "Oh, hey you are finally awake!",
 				isQuestion: true,
 				isAccepted: false,
 				isConfirmed: false,
+				expression: 'kvinna_standard',
 			},
 			{
 				spoken: false,
-				line:  'Thank you, brave Warrior!',
+				line:  "I really enjoyed watching you sleep though...",
 				isQuestion: false,
 				isAccepted: false,
 				isConfirmed: false,
+				expression: 'kvinna_hehe'
+			},
+			{
+				spoken: false,
+				line:  "But it's really getting dark fast these days. You can't lie around here when the sun sets!",
+				isQuestion: false,
+				isAccepted: false,
+				isConfirmed: false,
+				expression: 'kvinna_omg'
+			},
+			{
+				spoken: false,
+				line:  "We need to find you a safe place.",
+				isQuestion: false,
+				isAccepted: false,
+				isConfirmed: false,
+				expression: 'kvinna_standard'
 			}]
 		}];
 	}
@@ -28,7 +46,6 @@ class NPC extends Phaser.Sprite {
 		var question;
 		for(var i = 0; i < this.conversations[0].lines.length; i++){
 			if(!this.conversations[0].lines[i].spoken){
-				console.log(this.conversations[0].lines[i]);
 				if(question === undefined || question.isConfirmed){
 					this.conversations[0].lines[i].spoken = true;
 					this.conversations[0].linesSpoken++;
@@ -39,7 +56,8 @@ class NPC extends Phaser.Sprite {
 					if(this.conversations[0].lines[i].isQuestion){
 						question = this.conversations[0].lines[i];
 					}
-		
+					
+					this.loadTexture(this.conversations[0].lines[i].expression)
 					return this.conversations[0].lines[i].line;
 				}
 

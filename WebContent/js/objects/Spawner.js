@@ -1,11 +1,12 @@
 class Spawner {
-	constructor(game, spawnPoints, type, scale, onSpawnObjectUpdate) {
+	constructor(game, spawnPoints, type, scale, group, onSpawnObjectUpdate) {
 		this.game = game;
 		this.spawnPoints = spawnPoints;
 		this.scale = scale;
 		this.type = type;
+		this.group = group;
 		this.onSpawnObjectUpdate = onSpawnObjectUpdate;
-		this.objects = [];
+
 	}
 	
 	spawnObjects(){
@@ -30,7 +31,8 @@ class Spawner {
 		
 		object.id = index;
 		object.scale.setTo(this.scale, this.scale);
-		this.game.add.existing(object);
-		this.objects.push(object);
+		
+		this.group.add(object);
+
 	}
 }

@@ -160,22 +160,52 @@
     },
     {
       "type": "image",
-      "key": "area2",
-      "url": "assets/areas/area2/area2.png",
+      "key": "area2_0",
+      "url": "assets/areas/area2/area2_0.png",
       "overwrite": false
     },
     {
       "type": "image",
-      "key": "area2p",
-      "url": "assets/areas/area2/area2,5.png",
+      "key": "area2_1",
+      "url": "assets/areas/area2/area2_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2_0_dusk",
+      "url": "assets/areas/area2/area2_0_dusk.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2_0_dusk_wicked",
+      "url": "assets/areas/area2/area2_0_dusk_wicked.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2_1_dusk",
+      "url": "assets/areas/area2/area2_1_dusk.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2_1_dusk_wicked",
+      "url": "assets/areas/area2/area2_1_dusk_wicked.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area2_1_dusk_wicked_effect",
+      "url": "assets/areas/area2/area2_1_dusk_wicked_effect.png",
       "overwrite": false
     }
   ],
   "area3": [
     {
       "type": "image",
-      "key": "area3_wicked",
-      "url": "assets/areas/area3/area3_wicked.png",
+      "key": "area3_dusk",
+      "url": "assets/areas/area3/area3_dusk.png",
       "overwrite": false
     },
     {
@@ -189,19 +219,49 @@
       "key": "kvinna_standard",
       "url": "assets/images/kvinna_standard.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "kvinna_hehe",
+      "url": "assets/images/kvinna_hehe.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "kvinna_omg",
+      "url": "assets/images/kvinna_omg.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area3_wicked",
+      "url": "assets/areas/area3/area3_wicked.png",
+      "overwrite": false
     }
   ],
   "area4": [
     {
       "type": "image",
-      "key": "area4",
-      "url": "assets/areas/area4/area4.png",
+      "key": "area4_0",
+      "url": "assets/areas/area4/area4_0.png",
       "overwrite": false
     },
     {
       "type": "image",
-      "key": "area4p",
-      "url": "assets/areas/area4/area4p.png",
+      "key": "area4_1",
+      "url": "assets/areas/area4/area4_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area4_1_dusk",
+      "url": "assets/areas/area4/area4_1_dusk.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area4_0_dusk",
+      "url": "assets/areas/area4/area4_0_dusk.png",
       "overwrite": false
     }
   ],
@@ -432,7 +492,7 @@
     }
   ],
   "meta": {
-    "generated": "1564748705956",
+    "generated": "1575239693008",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

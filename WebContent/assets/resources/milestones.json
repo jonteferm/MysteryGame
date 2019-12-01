@@ -1,4 +1,5 @@
 {
+	"Area3 banished"		: { "reached" : false},
 	"Found ant-trail" 		: { "reached" : false},
 	"Found crystal" 		: { "reached" : false},
 	"Activated crystal" 	: { "reached" : false},
