@@ -2,7 +2,7 @@ class Area4_0 extends World{
 	constructor(){
 		super();
 		this.lightBackground = "area4_0";
-		this.duskBackground = "area4_0 _dusk";
+		this.duskBackground = "area4_0_dusk";
 		this.tainted = false;
 	}
 	

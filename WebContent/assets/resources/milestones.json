@@ -1,11 +1,10 @@
 {
-	"Area3 banished"		: { "reached" : false},
-	"Found ant-trail" 		: { "reached" : false},
-	"Found crystal" 		: { "reached" : false},
-	"Activated crystal" 	: { "reached" : false},
-	"Examined ant-hill" 	: { "reached" : false},
-	"Destroyed ant-hill"	: { "reached" : false},
-	"Picked-up crystal"		: { "reached" : false},
-	"Attacked by ants"		: { "reached" : false},
-	"Placed crystal"		: { "reached" : false}
+	"Area3 banished"		: { "reached" : false, "area" : "3_0", "value" : 1},
+	"Found ant-trail" 		: { "reached" : false, "area" : "5_0", "value" : 2},
+	"Examined ant-hill" 	: { "reached" : false, "area" : "5_1", "value" : 3},
+	"Destroyed ant-hill"	: { "reached" : false, "area" : "5_2", "value" : 4},
+	"Picked-up crystal"		: { "reached" : false, "area" : "5_2", "value" : 5},
+	"Attacked by ants"		: { "reached" : false, "area" : "5_2", "value" : 6},
+	"Talked with Ragna"		: { "reached" : false, "area" : "5_3", "value" : 7},
+	"Placed crystal"		: { "reached" : false, "area" : "6_0", "value" : 8}
 }

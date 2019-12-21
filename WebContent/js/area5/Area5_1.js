@@ -9,8 +9,9 @@ class Area5_1 extends World {
 	
 	createArea(){
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_0');
-		
-		if(!this.milestones["Attacked by ants"].reached){
+		console.log(this.milestoneManager.getAreasCleared(["5_2"]));
+		if(!this.milestoneManager.getAreasCleared(["5_2"])){
+			console.log("här ska man inte va");
 			this.drowsingArea = new DrowsingArea(this.game, 400, 280, 500, 350, areaTypes.CRYSTAL_ENERGY);
 			
 			this.antStack = new LocationOfInterest(this.game, 500, 400, 0, 0, null);
@@ -19,7 +20,7 @@ class Area5_1 extends World {
 			
 			this.controlPanel.examinationButton.onClick = function(context){
 				context.controlPanel.addText("An unusual glow sorrounds the ant-hill, just like the ants entering it.");
-				context.milestones["Examined ant-hill"].reached = true;
+				context.milestoneManager.setMilestoneReached("Examined ant-hill");
 			}
 			
 			var antHillGlow = this.game.add.image(0,0, 'area5_1_glow');
@@ -54,14 +55,15 @@ class Area5_1 extends World {
 				}
 			};
 			
-			this.antSpawner = new Spawner(this.game, antSpawnPoints, 'CrystalAnt', 0.12, setAngle);
+			this.ants = this.game.add.group();
+			this.antSpawner = new Spawner(this.game, antSpawnPoints, 'CrystalAnt', 0.12, this.ants, setAngle);
 			this.antSpawner.spawnObjects();
 		    this.game.time.events.loop(Phaser.Timer.SECOND * 7, function(){this.antSpawner.spawnObjects();}, this);
 		}
 	}
 	
 	updateArea(){
-		if(this.milestones["Examined ant-hill"].reached === true){
+		if(this.milestoneManager.getMilestoneReached("Examined ant-hill")){
 			this.directionArrows.setBorderingAreas('', '', 'area5_2', 'area5_0');
 		}
 		
@@ -77,7 +79,7 @@ class Area5_1 extends World {
 	}
 
 	moveAnts(){
-		this.antSpawner && this.antSpawner.objects.forEach(function(ant){
+		this.antSpawner && this.ants.forEach(function(ant){
 			if(ant.position.y > 700){
 				ant.visible = false;
 			}else{

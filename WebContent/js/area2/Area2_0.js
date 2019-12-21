@@ -6,6 +6,7 @@ class Area2_0 extends World {
 		super();
 		this.lightBackground = "area2_0";
 		this.duskBackground = "area2_0_dusk";
+		this.wickedDuskBackground ="area2_0_dusk_wicked";
 	}
 
 	createArea(){

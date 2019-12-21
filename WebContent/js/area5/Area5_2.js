@@ -3,17 +3,17 @@ class Area5_2 extends World {
 		super();
 		this.lightBackground = "area5_2";
 		this.tainted = false;
-
-		
 		this.antsAttacking = false;
 		this.antSpawner = null;
+		
+		this.ms1 = "Destroyed ant-hill";
+		this.ms2 = "Picked-up crystal";
+		this.ms3 = "Attacked by ants";
 	}
 	
 	createArea(){
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_1');
-		if(this.milestones["Attacked by ants"].reached){
-			
-		}else{
+		if(!this.milestoneManager.getMilestoneReached(this.ms3)){
 			this.antHillGlow = this.game.add.image(0,0, 'area5_2_glow');
 			this.antHillGlow.alpha = 0;
 			this.antHillGlowtween = this.game.add.tween(this.antHillGlow).to({alpha: 1}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true);
@@ -33,7 +33,7 @@ class Area5_2 extends World {
 			this.antHillClickArea = this.game.add.existing(new LocationOfInterest(this.game, 500, 200, 300, 300, null));
 			
 			this.game.input.onDown.add(function(){
-				if(!this.milestones["Destroyed ant-hill"].reached){
+				if(!this.milestoneManager.getMilestoneReached(this.ms1)){
 					if(Phaser.Rectangle.contains(this.antHillClickArea.body, this.game.input.activePointer.x, this.game.input.activePointer.y)){
 						this.openAntHill();
 					}
@@ -44,31 +44,26 @@ class Area5_2 extends World {
 		    this.ants = this.game.add.group();
 			
 			this.antSpawner = new Spawner(this.game, antSpawnPointsTemp, 'CrystalAnt', 0.16, this.ants, this.setAngle);
-		    this.antAttackSpawner = null;
-		    
 			this.antSpawner.spawnObjects();
 			this.antSpawner.spawnPoints = antSpawnPoints;
 		    this.antSpawnerLoop = this.game.time.events.loop(Phaser.Timer.SECOND * 5, function(){this.antSpawner.spawnObjects();}, this);
 		}
-
 	}
 	
 	updateArea(){
-		if(this.antSpawner){
-			console.log(this.ants.children.length);
-		}
-		
-		if(this.antsAttacking && this.ants.children.length < 200){
-			if(this.vertigo && this.vertigo.active){
-				this.moveAttackingAnts();
-			}else{
-				this.antsAttack();
+		if(!this.milestoneManager.getMilestoneReached(this.ms3)){
+			if(this.antsAttacking && this.ants.children.length < 200){
+				if(this.vertigo && this.vertigo.active){
+					this.moveAttackingAnts();
+				}else{
+					this.antsAttack();
+				}
 			}
+	
+			this.moveAnts();
+			
+			this.controlPanel.bringToTop();
 		}
-
-		this.moveAnts();
-		
-		this.controlPanel.bringToTop();
 	}
 	
 	openAntHill(){
@@ -92,15 +87,13 @@ class Area5_2 extends World {
 		var tween3 = this.game.add.tween(crystal).to({alpha: 1}, 2000, Phaser.Easing.Linear.In, true);
 		var tween4 = this.game.add.tween(crystalGlowing).to({alpha: 1}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true);
 		
-		this.milestones["Destroyed ant-hill"].reached = true;
-		
-
+		this.milestoneManager.setMilestoneReached(this.ms1);
 		
 	    crystalGlowing.events.onInputDown.add(function(item){
 	    	this.inventory.addItem(item);
 	    	crystal.destroy();
 	    	crystalGlowing.destroy();
-	    	this.milestones["Picked-up crystal"].reached = true;
+	    	this.milestoneManager.setMilestoneReached(this.ms2);
 	    	
 	    	this.game.time.events.remove(this.antSpawnerLoop);
 
@@ -114,14 +107,12 @@ class Area5_2 extends World {
 			if(this.antsAttacking){
 				if(ant.position.y > 800){
 					this.ants.remove(ant, true);
-					//ant.destroy();
-					//array.splice(index, 1); //TODO: Better solution where we remove ants as a group
 				}else{
 					ant.yVelocity = 20;
 				}
 			}
 			
-			if(this.milestones["Destroyed ant-hill"].reached){
+			if(this.milestoneManager.getMilestoneReached(this.ms1)){
 				if(ant.position.y <= 300  && ant.tween === null){
 					this.fadeAndDestroy(ant);
 				}
@@ -131,8 +122,6 @@ class Area5_2 extends World {
 					this.fadeAndDestroy(ant);
 				}
 			}
-
-
 
 			if(ant.body !== null){
 				if(ant.position.x > 800 && ant.position.x < 1280){
@@ -183,11 +172,16 @@ class Area5_2 extends World {
 			context.game.camera.shake(0.008, 1000, true, Phaser.Camera.SHAKE_BOTH, true);
 			context.game.world.bringToTop(context.attackingAnts);
 			context.game.world.bringToTop(context.ants);
+			context.krumilurTopLeft.bringToTop();
+			context.krumilurTopRight.bringToTop();
+			context.krumilurBottomRight.bringToTop();
+			context.krumilurBottomLeft.bringToTop();
+			context.directionArrows.bringToTop();
 		}
 		
 		var setMilestoneFinished = function(context){
-			context.milestones["Attacked by ants"].reached = true;
-			context.signals.newArea.dispatch('area5_3');	
+			context.milestoneManager.setMilestoneReached(context.ms3);
+			context.game.time.events.stop();
 		}
 		
     	var vertigoFrames = ["area5_2_attack_1", "area5_2_attack_2", "area5_2_attack_3", "area5_2_attack_4", "area5_2_attack_5", "area5_2_attack_6", "area5_2_attack_7"];

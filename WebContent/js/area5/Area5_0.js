@@ -2,6 +2,7 @@ class Area5_0 extends World {
 	constructor(){
 		super();
 		this.lightBackground = "area5_0";
+		this.duskBackground = "area5_0_dusk";
 		this.tainted = false;
 		this.activeLocationOfInterest = null;
 	}
@@ -14,10 +15,8 @@ class Area5_0 extends World {
 		
 		
 		this.findAntTrail = new Happening(function(context){
-			context.milestones["Found ant-trail"].reached = true;
-			console.log(context.milestones);
+			context.milestoneManager.setMilestoneReached("Found ant-trail");
 		});
-		
 
 		this.hiddenAntTrailLocation = new LocationOfInterest(this.game, 500, 400, 0, 0, null);
 		
@@ -42,18 +41,22 @@ class Area5_0 extends World {
 			}else{
 				context.activeLocationOfInterest.exit();
 				
-				if(!context.milestones["Found ant-trail"].reached === true){
+				if(!context.milestoneManager.getMilestoneReached("Found ant-trail")){
 					context.findAntTrail.happen(context);
 					context.controlPanel.addText("I wonder if these ants will lead me somewhere...");
 				}
 			}
+		}
+		
+		if(this.milestoneManager.getAreasCleared(["5_3"])){
+			this.timeManager.start();
 		}
 	}
 	
 	
 	updateArea(){
 
-		if(this.milestones["Found ant-trail"].reached === true && this.directionArrows.borderingAreas.forward === ''){
+		if(this.milestoneManager.getMilestoneReached("Found ant-trail") && this.directionArrows.borderingAreas.forward === ''){
 			this.directionArrows.setBorderingAreas('', '', 'area5_1', 'area4p');
 
 		}

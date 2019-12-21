@@ -2,7 +2,6 @@ class BackgroundManager {
 	constructor(context){
 		this.context = context;
 		this.background = null;
-
 	}
 	
 	transition(area, areaContext){		
@@ -18,7 +17,6 @@ class BackgroundManager {
 	
 
 	setBackground(background){
-		console.log(this.context);
 		if(this.context.background){
 			this.context.background.destroy();
 		}
@@ -26,13 +24,31 @@ class BackgroundManager {
 		if(background){
 			this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, background);
 		}else{
-			if(this.context.tainted){
-				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.darkBackground);
+			if(this.context.tainted && !this.context.dusk && this.context.wickedBackground){
+				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.wickedBackground);
+			}else if(this.context.tainted && this.context.dusk && this.context.wickedDuskBackground){
+				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720,  this.context.wickedDuskBackground);
+			}else if (!this.context.tainted && this.context.dusk && this.context.duskBackground){
+				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.duskBackground);
 			}else{
+
 				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.lightBackground);
 			}
 		}
 		
+		this.setTop();
+
+	}
+	
+	setDusk(){
+		if(this.duskBackground && !this.duskSet){
+			this.backgroundManager.setBackground(this.duskBackground);
+			this.duskSet = true;
+		}
+	}
+	
+	//TODO: Move to UIManager
+	setTop(){
 		this.context.krumilurTopLeft.bringToTop();
 		this.context.krumilurTopRight.bringToTop();
 		this.context.krumilurBottomRight.bringToTop();

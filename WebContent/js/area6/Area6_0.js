@@ -1,7 +1,7 @@
 class Area6_0 extends World {
 	constructor(){
 		super();
-		this.darkBackground = "area6_0_wicked"
+		this.wickedBackground = "area6_0_wicked"
 		this.lightBackground = "area6_0";
 		this.tainted = true;
 		this.activeLocationOfInterest = null;
@@ -46,6 +46,14 @@ class Area6_0 extends World {
 			this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
 			this.wickedness.frameTime = 3;
 			this.wickedness.easing = true;
+			this.wickedness.onEachFrame = function(context){
+				context.krumilurTopLeft.bringToTop();
+				context.krumilurTopRight.bringToTop();
+				context.krumilurBottomRight.bringToTop();
+				context.krumilurBottomLeft.bringToTop();
+				context.directionArrows.bringToTop();
+				context.pendulum.bringToTop();
+			}
 			
 		}else{
 			this.initGodHeads();

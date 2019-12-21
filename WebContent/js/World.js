@@ -10,7 +10,7 @@ class World extends Phaser.State {
 	}
 
 	init(params){	
-		this.duskSet = false;
+		this.dusk = false;
 
 		if(params === undefined){
 			this.areas = {
@@ -27,15 +27,16 @@ class World extends Phaser.State {
 					"area6_0": Area6_0,
 			};
 
-			this.milestones = this.cache.getJSON("milestones");
+			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));
 			this.effectsManager = new EffectsManager(this.game, this);
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
 			this.backgroundManager = new BackgroundManager(this);
 		}else{
 			params.directionArrows.destroy(true);
 			this.areas = params.areas;
-			this.milestones = params.milestones;
+			this.milestoneManager = params.milestoneManager;
 			this.timeManager = params.timeManager;
+			this.dusk = params.dusk;
 			this.backgroundManager = new BackgroundManager(this);
 		}
 		
@@ -81,11 +82,11 @@ class World extends Phaser.State {
 	update(){
 		this.timeManager.update();
 
-		if(this.timeManager.isPastDusk()){
-			console.log("setdusk");
-			this.setDusk();
+		if(!this.dusk && this.timeManager.isPastDusk()){
+			this.dusk = true;
+			this.backgroundManager.setBackground();
 		}
-		
+
 		this.updateArea();
 	}
 	
@@ -98,13 +99,6 @@ class World extends Phaser.State {
         var max = 30;
 		$('#drawSurface').css('left', (Math.floor(Math.random() * (max - min + 1)) + min) + 280 + 'px');
 		$('#drawSurface').css('top', Math.floor(Math.random() * (max - min + 1)) + min + 'px');
-	}
-	
-	setDusk(){
-		if(this.duskBackground && !this.duskSet){
-			this.backgroundManager.setBackground(this.duskBackground);
-			this.duskSet = true;
-		}
 	}
 }
 

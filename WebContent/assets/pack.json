@@ -415,6 +415,12 @@
       "key": "area5_3",
       "url": "assets/areas/area5/area5_3.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area5_0_dusk",
+      "url": "assets/areas/area5/area5_0_dusk.png",
+      "overwrite": false
     }
   ],
   "resources": [{
@@ -492,7 +498,7 @@
     }
   ],
   "meta": {
-    "generated": "1575239693008",
+    "generated": "1575715395903",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

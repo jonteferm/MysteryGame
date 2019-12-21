@@ -2,7 +2,7 @@ class Area3 extends World {
 	constructor(){
 		super();
 		this.lightBackground = "area3";
-		this.darkBackground = "area3_wicked";
+		this.wickedBackground = "area3_wicked";
 		this.duskBackground = "area3_dusk";
 	}
 	
@@ -35,7 +35,6 @@ class Area3 extends World {
 		this.signals.banishing.add(function(){
 			this.banishDarkPowers.happen(this);
 		}, this);
-
 	}
 	
 	updateArea(){

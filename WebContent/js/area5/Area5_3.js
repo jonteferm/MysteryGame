@@ -6,8 +6,7 @@ class Area5_3 extends World {
 	}
 	
 	createArea(){
-		this.milestones["Attacked by ants"].reached = true; //TODO: Remove
-		
+	
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_2');
 		
 		this.woman = new NPC(this.game, 0, 375, 'kvinna_standard');
@@ -23,8 +22,7 @@ class Area5_3 extends World {
 			this.controlPanel.addText("Ragna Lindenstjerna: " + this.woman.chat());
 		}, this);
 		
-		this.timeManager.start();
-		
+		this.milestoneManager.setMilestoneReached("Talked with Ragna");
 	}
 	
 	
