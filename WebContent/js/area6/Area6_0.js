@@ -30,7 +30,6 @@ class Area6_0 extends World {
 			context.background.destroy();
 			context.wickedness.destroy();
 			context.tainted = false;
-	
 			context.backgroundManager.setBackground();
 			context.initGodHeads();
 		});
@@ -42,17 +41,12 @@ class Area6_0 extends World {
 		
 		if(this.tainted){
 			this.wickednessFrames =  ["area6_0_wicked_twist_1", "area6_0_wicked_twist_2", "area6_0_wicked_twist_3", "area6_0_wicked_twist_2", "area6_0_wicked_twist_1", "area6_0_wicked"];
-		    
 			this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
 			this.wickedness.frameTime = 3;
 			this.wickedness.easing = true;
+			
 			this.wickedness.onEachFrame = function(context){
-				context.krumilurTopLeft.bringToTop();
-				context.krumilurTopRight.bringToTop();
-				context.krumilurBottomRight.bringToTop();
-				context.krumilurBottomLeft.bringToTop();
-				context.directionArrows.bringToTop();
-				context.pendulum.bringToTop();
+				context.backgroundManager.setTop();
 			}
 			
 		}else{

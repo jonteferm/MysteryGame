@@ -6,7 +6,6 @@ class Area5_3 extends World {
 	}
 	
 	createArea(){
-	
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_2');
 		
 		this.woman = new NPC(this.game, 0, 375, 'kvinna_standard');

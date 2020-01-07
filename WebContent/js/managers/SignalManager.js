@@ -11,12 +11,6 @@ class SignalManager {
 
 		this.signals.newArea.add(function(area){
 			this.game.state.add(area, this.context.areas[area]);
-
-			this.game.state.onStateChange.add(function(newState, oldState){
-				//console.log(this.game.state.states[oldState]);
-			}, this);
-			
-
 			this.context.backgroundManager.transition(area, this.context);
 		}, this);
 	}

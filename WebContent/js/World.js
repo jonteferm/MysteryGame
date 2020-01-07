@@ -10,14 +10,12 @@ class World extends Phaser.State {
 	}
 
 	init(params){	
-		this.dusk = false;
-
 		if(params === undefined){
 			this.areas = {
 					"area1": Area1,
 					"area2_0": Area2_0,
 					"area2_1": Area2_1,
-					"area3": Area3,
+					"area3_0": Area3_0,
 					"area4_0": Area4_0,
 					"area4_1": Area4_1,
 					"area5_0": Area5_0,
@@ -26,7 +24,7 @@ class World extends Phaser.State {
 					"area5_3": Area5_3,
 					"area6_0": Area6_0,
 			};
-
+			this.dusk = false;
 			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));
 			this.effectsManager = new EffectsManager(this.game, this);
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
@@ -42,7 +40,6 @@ class World extends Phaser.State {
 		
 		this.signals = new SignalManager(this.game, this).signals;
 		this.uiManager = new UIManager(this.game, this);
-		
 		this.uiManager.initUIComponents(params);
 	}
 	

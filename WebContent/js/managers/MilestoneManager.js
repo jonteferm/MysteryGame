@@ -61,15 +61,30 @@ class MilestoneManager {
 	}
 	
 	getAreasCleared(areas) {
-		return areas.forEach(area => {
+		var finished = true;
+		
+		areas.forEach(area => {
 			var areaMaxPoints = this.getAreaMaxPoints(area);
-			if(areaMaxPoints > 0 && (this.getAreaPoints(area) !== areaMaxPoints)){
-				return false;
+			console.log(this.getAreaPoints(area));
+			if(areaMaxPoints > 0 && (this.getAreaPoints(area) < areaMaxPoints)){
+				finished = false;
 			}
 		});
-			
+
+		return finished;
+	}
+	
+	setAreasCleared(areas) {
+		var finished = true;
 		
-		return true; 
+		areas.forEach(area => {
+			Object.keys(this.milestones).forEach(key => {
+				var milestone = this.milestones[key];
+				if(milestone.area === area){
+					milestone.reached = true;
+				}
+			});
+		});
 	}
 	
 	/*

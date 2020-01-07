@@ -7,7 +7,7 @@ class Area4_0 extends World{
 	}
 	
 	createArea(){
-		this.directionArrows.setBorderingAreas('area3', '', 'area4_1', '');
+		this.directionArrows.setBorderingAreas('area3_0', '', 'area4_1', '');
 		this.drowsingArea = new DrowsingArea(this.game, 500, 400, 100, 100, areaTypes.CRYSTAL_ENERGY);
 		this.game.physics.enable(this.drowsingArea, Phaser.Physics.ARCADE);
 	}

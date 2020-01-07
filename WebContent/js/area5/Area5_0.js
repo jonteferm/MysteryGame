@@ -55,9 +55,8 @@ class Area5_0 extends World {
 	
 	
 	updateArea(){
-
 		if(this.milestoneManager.getMilestoneReached("Found ant-trail") && this.directionArrows.borderingAreas.forward === ''){
-			this.directionArrows.setBorderingAreas('', '', 'area5_1', 'area4p');
+			this.directionArrows.setBorderingAreas('', '', 'area5_1', 'area4_0');
 
 		}
 		

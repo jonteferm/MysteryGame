@@ -31,7 +31,6 @@ class BackgroundManager {
 			}else if (!this.context.tainted && this.context.dusk && this.context.duskBackground){
 				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.duskBackground);
 			}else{
-
 				this.context.background = this.context.game.add.tileSprite(0, 0, 1280, 720, this.context.lightBackground);
 			}
 		}
@@ -53,5 +52,6 @@ class BackgroundManager {
 		this.context.krumilurTopRight.bringToTop();
 		this.context.krumilurBottomRight.bringToTop();
 		this.context.krumilurBottomLeft.bringToTop();
+		this.context.pendulum.bringToTop();
 	}
 }

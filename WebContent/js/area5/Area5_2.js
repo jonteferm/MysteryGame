@@ -182,6 +182,7 @@ class Area5_2 extends World {
 		var setMilestoneFinished = function(context){
 			context.milestoneManager.setMilestoneReached(context.ms3);
 			context.game.time.events.stop();
+			context.signals.newArea.dispatch('area5_3');
 		}
 		
     	var vertigoFrames = ["area5_2_attack_1", "area5_2_attack_2", "area5_2_attack_3", "area5_2_attack_4", "area5_2_attack_5", "area5_2_attack_6", "area5_2_attack_7"];

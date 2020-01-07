@@ -6,5 +6,7 @@
 	"Picked-up crystal"		: { "reached" : false, "area" : "5_2", "value" : 5},
 	"Attacked by ants"		: { "reached" : false, "area" : "5_2", "value" : 6},
 	"Talked with Ragna"		: { "reached" : false, "area" : "5_3", "value" : 7},
-	"Placed crystal"		: { "reached" : false, "area" : "6_0", "value" : 8}
+	"Area2_1 banished"      : { "reached" : false, "area" : "2_1", "value" : 8},
+	"Area2_0 banished"		: { "reached" : false, "area" : "2_0", "value" : 9},
+	"Placed crystal"		: { "reached" : false, "area" : "6_0", "value" : 10}
 }

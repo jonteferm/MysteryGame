@@ -9,25 +9,23 @@ class FrameSwitcher{
 		this.onEachFrame = null;
 		this.onFinished = null;
 		this.easing = false;
+		this.reapeat = false;
 		
 		this.frameTime = 1;
 		
 		this.prevFrame = null;
-		
-		this.images = [];
-		this.destroying = false;
 	}
 	
 	start(currentFrameNum){
 		var increase = currentFrameNum || 0;
 		this.backgroundId = this.frames[increase];
     	this.active = true;
-    	
+
     	this.game.time.events.add(Phaser.Timer.SECOND * this.frameTime, function(){
 			if(this.activeFrame !== undefined){
 				this.prevFrame = this.activeFrame;
 			}
-			
+	    	
 			this.activeFrame = this.game.add.image(0, 0, this.backgroundId);
 			
 			if(this.easing){
@@ -51,16 +49,13 @@ class FrameSwitcher{
 				}
 			}
 	
-	
     		if(increase <= this.frames.length){
     			this.start(increase + 1);	
-    		}else{
+    		}else{	
     			this.destroy();
     			if(this.onFinished !== null){
         			this.onFinished(this.context);
     			}
-    			
-    			this.active = false;
     		}
     		
 
@@ -68,11 +63,16 @@ class FrameSwitcher{
         		this.onEachFrame(this.context);
     		}
     	}, this);
+    	
+
 	}
 	
 	
 	destroy(){
-		this.frames = [];
+		this.active = false;
 		this.activeFrame.destroy();
+		if(!this.repeat){
+			this.game.time.events.stop();
+		}
 	}
 }

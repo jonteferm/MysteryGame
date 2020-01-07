@@ -9,9 +9,9 @@ class Area5_1 extends World {
 	
 	createArea(){
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_0');
-		console.log(this.milestoneManager.getAreasCleared(["5_2"]));
+		this.milestoneManager.setAreasCleared(['5_1','5_2','5_3', '3_0']);
+
 		if(!this.milestoneManager.getAreasCleared(["5_2"])){
-			console.log("här ska man inte va");
 			this.drowsingArea = new DrowsingArea(this.game, 400, 280, 500, 350, areaTypes.CRYSTAL_ENERGY);
 			
 			this.antStack = new LocationOfInterest(this.game, 500, 400, 0, 0, null);
