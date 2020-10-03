@@ -5,33 +5,49 @@ class UIManager {
 	}
 	
 	initUIComponents(prevStateParams){
-		if(prevStateParams){
-			this.reassignOldComponents(prevStateParams);
-		}else{
-			this.context.inventory = new Inventory(this.game, 0, (48*4));
-			this.context.spellbook = new Spellbook(this.game, 100, 100);		
-			this.context.pendulum = new Pendulum(this.game, 750, 20);
-			
-			this.context.krumilurTopLeft = new Phaser.Image(this.game, 0, 0, 'krumilur_top_left');
-			this.context.krumilurTopRight = new Phaser.Image(this.game, 1150, 0, 'krumilur_top_right');
-			this.context.krumilurBottomRight = new Phaser.Image(this.game, 1150, 590, 'krumilur_bottom_right');
-			this.context.krumilurBottomLeft = new Phaser.Image(this.game, 0, 590, 'krumilur_bottom_left');
-			
-			this.game.add.existing(this.context.krumilurTopLeft);
-			this.game.add.existing(this.context.krumilurTopRight);
-			this.game.add.existing(this.context.krumilurBottomRight);
-			this.game.add.existing(this.context.krumilurBottomLeft);
-			
-			this.context.controlPanel = new ControlPanel(this.game, this.game.camera.x, this.game.camera.y+(880-160));
-			this.context.controlPanel.fixedToCamera = true;
-			this.context.keyManager = new KeyManager(this.game);
-			
 
-		}
+		this.context.inventory = new Inventory(this.game, 0, (48*4));
+		this.context.spellbook = new Spellbook(this.game, 100, 100);		
+		this.context.pendulum = new Pendulum(this.game, 750, 20);
+		
+		this.context.krumilurTopLeft = new Phaser.Image(this.game, 0, 0, 'krumilur_top_left');
+		this.context.krumilurTopRight = new Phaser.Image(this.game, 1150, 0, 'krumilur_top_right');
+		this.context.krumilurBottomRight = new Phaser.Image(this.game, 1150, 590, 'krumilur_bottom_right');
+		this.context.krumilurBottomLeft = new Phaser.Image(this.game, 0, 590, 'krumilur_bottom_left');
+		
+		this.game.add.existing(this.context.krumilurTopLeft);
+		this.game.add.existing(this.context.krumilurTopRight);
+		this.game.add.existing(this.context.krumilurBottomRight);
+		this.game.add.existing(this.context.krumilurBottomLeft);
+		
+		this.context.controlPanel = new ControlPanel(this.game, this.game.camera.x, this.game.camera.y+(880-160));
+		this.context.controlPanel.fixedToCamera = true;
+		this.context.keyManager = new KeyManager(this.game);
+		
+		
 		this.initKeyBindings(this.context.keyManager);
+		
+		this.context.spellbook.inputEnabled = true;
+		this.context.spellbook.input.enableDrag();
+		this.context.spellbook.scale.set(0);
+		this.game.add.existing(this.context.spellbook);
+		this.context.spellbook.fixedToCamera = true;
+	
+		this.context.inventory.inputEnabled = true;
+		this.context.inventory.input.enableDrag();
+		this.context.inventory.scale.set(0);
+		this.game.add.existing(this.context.inventory);
+		this.context.inventory.fixedToCamera = true;
+		
+		this.game.add.existing(this.context.pendulum);
+		this.context.pendulum.inputEnabled = true;
+		this.context.pendulum.input.enableDrag();
+		this.context.pendulum.fixedToCamera = true;
+		this.context.pendulum.scale.set(0);
 	}
 	
 	reassignOldComponents(params){
+
 		this.context.inventory = params.inventory;
 		this.context.spellbook = params.spellbook;		
 		this.context.pendulum = params.pendulum;

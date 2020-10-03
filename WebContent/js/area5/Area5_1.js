@@ -9,7 +9,6 @@ class Area5_1 extends World {
 	
 	createArea(){
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_0');
-		this.milestoneManager.setAreasCleared(['5_1','5_2','5_3', '3_0']);
 
 		if(!this.milestoneManager.getAreasCleared(["5_2"])){
 			this.drowsingArea = new DrowsingArea(this.game, 400, 280, 500, 350, areaTypes.CRYSTAL_ENERGY);
@@ -28,10 +27,10 @@ class Area5_1 extends World {
 			var tween = this.game.add.tween(antHillGlow).to({alpha: 0}, 1500, Phaser.Easing.Linear.InOut, true, 0, 1500, true);
 
 			var antSpawnPoints = [];	
-			antSpawnPoints.push(new SpawnPoint(100, 200, 700, 100, 0));
-			antSpawnPoints.push(new SpawnPoint(100, 400, 700, 100, -100));
-			antSpawnPoints.push(new SpawnPoint(100, 700, 700, 100, -100));
-			antSpawnPoints.push(new SpawnPoint(100, 1000, 700, 100, -200));
+			antSpawnPoints.push(new SpawnPoint(30, 200, 700, 100, 0));
+			antSpawnPoints.push(new SpawnPoint(30, 400, 700, 100, -100));
+			antSpawnPoints.push(new SpawnPoint(30, 700, 700, 100, -100));
+			antSpawnPoints.push(new SpawnPoint(30, 1000, 700, 100, -200));
 			
 			var setAngle = function(){
 				if(this.angle < 0){

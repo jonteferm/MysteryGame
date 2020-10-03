@@ -7,6 +7,7 @@ class Area2_0 extends World {
 	}
 
 	createArea(){
+		
 		this.tainted = this.milestoneManager.getAreasCleared(['5_2', '5_3']) && !this.milestoneManager.getAreasCleared(['2_0']);
 		
 		if(this.tainted){
@@ -30,6 +31,7 @@ class Area2_0 extends World {
 	}
 
 	updateArea(){
+
 		if(this.tainted){
 			this.shakeCanvas();
 		}

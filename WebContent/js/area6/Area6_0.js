@@ -3,12 +3,17 @@ class Area6_0 extends World {
 		super();
 		this.wickedBackground = "area6_0_wicked"
 		this.lightBackground = "area6_0";
-		this.tainted = true;
 		this.activeLocationOfInterest = null;
 		this.tweenss = [];
 	}
 	
 	createArea(){
+		this.tainted = !this.milestoneManager.getMilestoneReached("Area6_0 banished");
+		
+		if(this.tainted){
+			this.backgroundManager.setBackground();	
+		}
+		
 		this.directionArrows.setBorderingAreas('', '', '', 'area2_0');
 
 		/*
@@ -24,10 +29,10 @@ class Area6_0 extends World {
 	    
 	    emitter1.start(false, 5000, 500);
 	   */
-		
 
 		this.banishDarkPowers = new Happening(function(context){
 			context.background.destroy();
+			context.wickedness.repeat = false;
 			context.wickedness.destroy();
 			context.tainted = false;
 			context.backgroundManager.setBackground();
@@ -44,6 +49,7 @@ class Area6_0 extends World {
 			this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
 			this.wickedness.frameTime = 3;
 			this.wickedness.easing = true;
+			this.wickedness.repeat = true;
 			
 			this.wickedness.onEachFrame = function(context){
 				context.backgroundManager.setTop();

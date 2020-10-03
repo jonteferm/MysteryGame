@@ -11,7 +11,8 @@ class BackgroundManager {
 		this.transitionTween.start();
 		
 		this.transitionTween.onComplete.add(function(){
-			this.game.state.start(area, false, false, areaContext);
+			this.game.stage.destroy();
+			this.game.state.start(area, true, false, areaContext);
 		}, this.context);
 	}
 	

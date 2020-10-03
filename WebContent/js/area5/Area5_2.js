@@ -18,17 +18,16 @@ class Area5_2 extends World {
 			this.antHillGlow.alpha = 0;
 			this.antHillGlowtween = this.game.add.tween(this.antHillGlow).to({alpha: 1}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true);
 			
-			var antSpawnPoints = [];
-			antSpawnPoints.push(new SpawnPoint(70, 100, 700, 100, -100));
-			antSpawnPoints.push(new SpawnPoint(70, 500, 700, 100, -100));
-			antSpawnPoints.push(new SpawnPoint(70, 800, 700, 100, -100));
-			antSpawnPoints.push(new SpawnPoint(70, 1100, 700, 100, -200));
 			
-			var antSpawnPointsTemp = [];
-			antSpawnPointsTemp.push(new SpawnPoint(100, 300, 530, 100, -100));
-			antSpawnPointsTemp.push(new SpawnPoint(100, 500, 530, 100, -100));
-			antSpawnPointsTemp.push(new SpawnPoint(100, 700, 530, 100, -100));
-			antSpawnPointsTemp.push(new SpawnPoint(100, 900, 530, 100, -200));
+			var antSpawnPoints = [];
+			antSpawnPoints.push(new SpawnPoint(2, 150, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 200, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 300, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 500, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 700, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 800, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 900, 700, 50, -50));
+			antSpawnPoints.push(new SpawnPoint(2, 1000, 700, 100, -100));
 
 			this.antHillClickArea = this.game.add.existing(new LocationOfInterest(this.game, 500, 200, 300, 300, null));
 			
@@ -43,10 +42,9 @@ class Area5_2 extends World {
 
 		    this.ants = this.game.add.group();
 			
-			this.antSpawner = new Spawner(this.game, antSpawnPointsTemp, 'CrystalAnt', 0.16, this.ants, this.setAngle);
+			this.antSpawner = new Spawner(this.game, antSpawnPoints, 'CrystalAnt', 0.16, this.ants, this.setAngle);
 			this.antSpawner.spawnObjects();
-			this.antSpawner.spawnPoints = antSpawnPoints;
-		    this.antSpawnerLoop = this.game.time.events.loop(Phaser.Timer.SECOND * 5, function(){this.antSpawner.spawnObjects();}, this);
+		    this.antSpawnerLoop = this.game.time.events.loop(Phaser.Timer.SECOND * 1, function(){this.antSpawner.spawnObjects()}, this);
 		}
 	}
 	
@@ -105,10 +103,12 @@ class Area5_2 extends World {
 	moveAnts(){
 		this.antSpawner && this.ants.children.forEach(function(ant, index, array){
 			if(this.antsAttacking){
+				//this.ants.remove(ant, true);
+				
 				if(ant.position.y > 800){
 					this.ants.remove(ant, true);
 				}else{
-					ant.yVelocity = 20;
+					ant.yVelocity = 50;
 				}
 			}
 			
@@ -155,16 +155,17 @@ class Area5_2 extends World {
 				ant.body.velocity.x = 80;
 			}					
 
-			ant.yVelocity = -150;
+			ant.yVelocity = -200;
 		});
 	}
 	
 	antsAttack(){
 		var antAttackSpawnPoints = [];
-		antAttackSpawnPoints.push(new SpawnPoint(80, 300, 600, 1200, -800));
+		antAttackSpawnPoints.push(new SpawnPoint(10, 300, 600, 1200, -800));
 		
 		this.attackingAnts = this.game.add.group();
 		this.antAttackSpawner = new Spawner(this.game, antAttackSpawnPoints, 'ant_neutral_underside', 1.2, this.attackingAnts ,this.setAngle);
+		//this.antAttackSpawner.spawnObjects();
 		this.game.time.events.loop(Phaser.Timer.SECOND * 1, function(){this.antAttackSpawner.spawnObjects();}, this);
 
 		
@@ -172,11 +173,7 @@ class Area5_2 extends World {
 			context.game.camera.shake(0.008, 1000, true, Phaser.Camera.SHAKE_BOTH, true);
 			context.game.world.bringToTop(context.attackingAnts);
 			context.game.world.bringToTop(context.ants);
-			context.krumilurTopLeft.bringToTop();
-			context.krumilurTopRight.bringToTop();
-			context.krumilurBottomRight.bringToTop();
-			context.krumilurBottomLeft.bringToTop();
-			context.directionArrows.bringToTop();
+
 		}
 		
 		var setMilestoneFinished = function(context){

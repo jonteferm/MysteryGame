@@ -7,12 +7,8 @@ class Pendulum extends Phaser.Sprite{
 		this.animations.add('dingle', [2,3,4,3,2,1,0,1]);
 		this.animations.add('circle', [0,1,2,3]);
 		this.overlappingArea = null;
-		
-
-	
 
 		console.log("pendulum: ", this.body);
-
 	}
 	
 	update(){

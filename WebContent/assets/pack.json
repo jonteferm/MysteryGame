@@ -423,12 +423,20 @@
       "overwrite": false
     }
   ],
-  "resources": [{
-    "type": "json",
-    "key": "milestones",
-    "url": "assets/resources/milestones.json",
-    "overwrite": false
-  }],
+  "resources": [
+    {
+      "type": "json",
+      "key": "milestones",
+      "url": "assets/resources/milestones.json",
+      "overwrite": false
+    },
+    {
+      "type": "json",
+      "key": "inventory",
+      "url": "assets/resources/inventory.json",
+      "overwrite": false
+    }
+  ],
   "area6": [
     {
       "type": "image",
@@ -498,7 +506,7 @@
     }
   ],
   "meta": {
-    "generated": "1575715395903",
+    "generated": "1596400439175",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

@@ -8,7 +8,7 @@ class Area2_1 extends World {
 
 	createArea(){
 		this.tainted = this.milestoneManager.getAreasCleared(['5_2', '5_3']) && !this.milestoneManager.getAreasCleared(['2_1']);;
-		
+
 		if(this.tainted){
 			this.directionArrows.setBorderingAreas('', '', '', '');
 			this.backgroundManager.setBackground();
@@ -27,8 +27,8 @@ class Area2_1 extends World {
 		
 		this.banishDarkPowers = new Happening(function(context){
 			context.background.destroy();
-			//context.wickedness.repeat = false;
-			//context.wickedness.destroy();
+			context.wickedness.repeat = false;
+			context.wickedness.destroy();
 			context.tainted = false;
 			context.directionArrows.setBorderingAreas('area2_0', '', 'area3_0', '');
 			context.backgroundManager.setBackground();
@@ -44,7 +44,7 @@ class Area2_1 extends World {
 	
 	updateArea(){
 		if(this.tainted && this.wickedness !== undefined && !this.wickedness.active){
-			//this.wickedness.start();
+			this.wickedness.start();
 		}
 		
 		if(this.tainted){

@@ -3,7 +3,6 @@ class SpellManager{
 		this.game = game;
 		this.context = context;
 		this.library = [];
-		this.initSpells(1);
 	}
 	
 	initSpells(casterLevel){

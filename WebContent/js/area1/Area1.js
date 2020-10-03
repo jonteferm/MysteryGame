@@ -14,7 +14,6 @@ class Area1 extends World {
 	
 	updateArea(){
 
-
 	}
 
 	placeItems(){

@@ -15,10 +15,10 @@ class Area5_3 extends World {
 		var womanFading = this.game.add.tween(this.woman).to({alpha: 1}, 2000, Phaser.Easing.Linear.None);
 		womanFading.start();
 		
-		this.controlPanel.addText("Ragna Lindenstjerna: " + this.woman.chat());
+		this.controlPanel.addText(this.woman.chat());
 		
 		this.signals.proceed.add(function(){
-			this.controlPanel.addText("Ragna Lindenstjerna: " + this.woman.chat());
+			this.controlPanel.addText(this.woman.chat());
 		}, this);
 		
 		this.milestoneManager.setMilestoneReached("Talked with Ragna");

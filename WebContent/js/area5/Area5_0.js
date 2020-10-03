@@ -13,7 +13,6 @@ class Area5_0 extends World {
 		this.drowsingArea = new DrowsingArea(this.game, 500, 400, 100, 100, areaTypes.CRYSTAL_ENERGY);
 		this.game.physics.enable(this.drowsingArea, Phaser.Physics.ARCADE);
 		
-		
 		this.findAntTrail = new Happening(function(context){
 			context.milestoneManager.setMilestoneReached("Found ant-trail");
 		});
@@ -48,6 +47,7 @@ class Area5_0 extends World {
 			}
 		}
 		
+
 		if(this.milestoneManager.getAreasCleared(["5_3"])){
 			this.timeManager.start();
 		}
@@ -74,12 +74,13 @@ class Area5_0 extends World {
 							.to({alpha: 0}, 1000, Phaser.Easing.Linear.None);
 							
 							ant.tween.onComplete.add(function(){
+								/*
 								this.tween = this.game.add.tween(this)
 								.to({alpha: 1}, 1000, Phaser.Easing.Linear.None);
 								this.tween.onComplete.add(function(){
 									this.tween = null;
 								},this);
-								this.tween.start();
+								this.tween.start();*/
 								this.position.y = 525-(this.height);
 							}, ant);
 							

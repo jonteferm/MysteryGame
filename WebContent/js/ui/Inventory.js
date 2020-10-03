@@ -5,6 +5,10 @@ class Inventory extends Phaser.Sprite{
 		this.content = [];
 	}
 	
+	loadItemsFromFile(){
+		
+	}
+	
 	addItem(item){
 		this.content.push(item);
 		
@@ -32,10 +36,6 @@ class Inventory extends Phaser.Sprite{
 			this.content = newContent;
 			
 			console.log(this.content);
-		}, this);
-
-		
-		
+		}, this);	
 	}
-
 }

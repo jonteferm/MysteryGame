@@ -6,7 +6,6 @@ class World extends Phaser.State {
 		this.drawSurface = {};
 		this.spellLibrary = [];
 		this.activeLocationOfInterest = null;
-
 	}
 
 	init(params){	
@@ -29,18 +28,31 @@ class World extends Phaser.State {
 			this.effectsManager = new EffectsManager(this.game, this);
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
 			this.backgroundManager = new BackgroundManager(this);
+			this.signalManager = new SignalManager(this.game, this);
+			this.uiManager = new UIManager(this.game, this);
+			this.spellManager = new SpellManager(this.game, this);
 		}else{
 			params.directionArrows.destroy(true);
 			this.areas = params.areas;
 			this.milestoneManager = params.milestoneManager;
 			this.timeManager = params.timeManager;
 			this.dusk = params.dusk;
-			this.backgroundManager = new BackgroundManager(this);
+			this.backgroundManager = params.backgroundManager;
+			this.signalManager = params.signalManager;
+			this.uiManager = params.uiManager;
+			this.spellManager = params.spellManager;
+			
+			this.backgroundManager.context = this;
+			this.signalManager.context = this;
+			this.uiManager.context = this;
+			this.spellManager.context = this;
 		}
 		
-		this.signals = new SignalManager(this.game, this).signals;
-		this.uiManager = new UIManager(this.game, this);
+
 		this.uiManager.initUIComponents(params);
+		this.signals = this.signalManager.signals;
+		this.spellManager.initSpells(1)
+		this.game.physics.enable(this.pendulum, Phaser.Physics.ARCADE);
 	}
 	
 	create(){
@@ -51,26 +63,6 @@ class World extends Phaser.State {
 	    //this.game.world.setBounds(-20, -20, game.width+20, game.height+2);	
 		this.directionArrows = new DirectionArrows(this.game, this.game.camera.x, this.game.camera.y, this.signals);
 
-		this.spellbook.inputEnabled = true;
-		this.spellbook.input.enableDrag();
-		this.spellbook.scale.set(0);
-		this.game.add.existing(this.spellbook);
-		this.spellbook.fixedToCamera = true;
-	
-		this.inventory.inputEnabled = true;
-		this.inventory.input.enableDrag();
-		this.inventory.scale.set(0);
-		this.game.add.existing(this.inventory);
-		this.inventory.fixedToCamera = true;
-		
-		this.game.add.existing(this.pendulum);
-		this.pendulum.inputEnabled = true;
-		this.pendulum.input.enableDrag();
-		this.pendulum.fixedToCamera = true;
-		this.pendulum.scale.set(0);
-		this.game.physics.enable(this.pendulum, Phaser.Physics.ARCADE);
-		
-		this.spellManager = new SpellManager(this.game, this);
 		this.backgroundManager.setBackground();
 
 		this.createArea();
