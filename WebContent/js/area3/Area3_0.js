@@ -7,6 +7,7 @@ class Area3_0 extends World {
 	}
 	
 	createArea(){
+
 		this.tainted = !this.milestoneManager.getMilestoneReached("Area3 banished");
 		
 		if(this.tainted){
@@ -22,6 +23,7 @@ class Area3_0 extends World {
 		
 
 		this.banishDarkPowers = new Happening(function(context){
+
 			context.background.tint = 0xffffff;
 			context.mist1.destroy();
 			context.mist2.destroy();
@@ -32,10 +34,11 @@ class Area3_0 extends World {
 			context.backgroundManager.setBackground();
 		});
 		
-		
 		this.signals.banishing.add(function(){
+			console.log("banish");
 			this.banishDarkPowers.happen(this);
 		}, this);
+
 	}
 	
 	updateArea(){

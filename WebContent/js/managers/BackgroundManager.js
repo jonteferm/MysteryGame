@@ -37,7 +37,6 @@ class BackgroundManager {
 		}
 		
 		this.setTop();
-
 	}
 	
 	setDusk(){

@@ -505,8 +505,102 @@
       "overwrite": false
     }
   ],
+  "area7": [
+    {
+      "type": "image",
+      "key": "area7_0",
+      "url": "assets/areas/area7/area7_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_1",
+      "url": "assets/areas/area7/area7_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_0_dusk",
+      "url": "assets/areas/area7/area7_0_dusk.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_1_dusk",
+      "url": "assets/areas/area7/area7_1_dusk.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_2",
+      "url": "assets/areas/area7/area7_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_2_skymning",
+      "url": "assets/areas/area7/area7_2_skymning.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_3",
+      "url": "assets/areas/area7/area7_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_3_skymning",
+      "url": "assets/areas/area7/area7_3_skymning.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_4",
+      "url": "assets/areas/area7/area7_4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_4_skymning",
+      "url": "assets/areas/area7/area7_4_skymning.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_5",
+      "url": "assets/areas/area7/area7_5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_5_skymning",
+      "url": "assets/areas/area7/area7_5_skymning.png",
+      "overwrite": false
+    }
+  ],
+  "area8": [
+    {
+      "type": "image",
+      "key": "area8_0",
+      "url": "assets/areas/area8/area8_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_1",
+      "url": "assets/areas/area8/area8_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_2",
+      "url": "assets/areas/area8/area8_2.png",
+      "overwrite": false
+    }
+  ],
   "meta": {
-    "generated": "1596400439175",
+    "generated": "1602944707758",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

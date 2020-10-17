@@ -8,10 +8,9 @@ class LocationOfInterest extends Phaser.Sprite{
 		
 		this.examinationObject = examinationObject;
 		
-		/*
+		
 		this.area = new Phaser.Rectangle(x, y, width, height);
 		this.game.debug.geom(this.area, 'rgba(200,0,0,0.5)');
-		*/
 	}
 	
 	examine(){

@@ -8,7 +8,7 @@ class Area2_1 extends World {
 
 	createArea(){
 		this.tainted = this.milestoneManager.getAreasCleared(['5_2', '5_3']) && !this.milestoneManager.getAreasCleared(['2_1']);;
-
+		
 		if(this.tainted){
 			this.directionArrows.setBorderingAreas('', '', '', '');
 			this.backgroundManager.setBackground();
@@ -17,7 +17,8 @@ class Area2_1 extends World {
 			this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
 			this.wickedness.easing = true;
 			this.wickedness.repeat = true;
-			
+			this.wickedness.frameTime = 0.5;
+		
 			this.wickedness.onEachFrame = function(context){
 				context.backgroundManager.setTop();
 			};
@@ -44,6 +45,7 @@ class Area2_1 extends World {
 	
 	updateArea(){
 		if(this.tainted && this.wickedness !== undefined && !this.wickedness.active){
+			console.log(this.wickedness);
 			this.wickedness.start();
 		}
 		

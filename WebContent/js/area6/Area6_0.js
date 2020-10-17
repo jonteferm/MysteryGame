@@ -36,7 +36,8 @@ class Area6_0 extends World {
 			context.wickedness.destroy();
 			context.tainted = false;
 			context.backgroundManager.setBackground();
-			context.initGodHeads();
+			context.directionArrows.setBorderingAreas('', '', 'area7_0', '');
+
 		});
 		
 		this.signals.banishing.add(function(){
@@ -55,9 +56,16 @@ class Area6_0 extends World {
 				context.backgroundManager.setTop();
 			}
 			
-		}else{
-			this.initGodHeads();
 		}
+			
+		
+		this.stoneHillClickArea = this.game.add.existing(new LocationOfInterest(this.game, 570, 310, 80, 150, null));
+		
+		this.game.input.onDown.add(function(){
+			if(Phaser.Rectangle.contains(this.stoneHillClickArea.body, this.game.input.activePointer.x, this.game.input.activePointer.y)){
+				this.placeCrystal();
+			}
+		}, this);
 
 	}
 	
@@ -70,6 +78,8 @@ class Area6_0 extends World {
 		if(this.tainted){
 			this.shakeCanvas();
 		}
+		
+
 	}
 	
 	initGodHeads(){
@@ -86,6 +96,25 @@ class Area6_0 extends World {
 		this.tweenss.push(this.game.add.tween(godHead).to({alpha: 1}, 4000, Phaser.Easing.Linear.InOut, true, 0, 5000, true));
 		this.tweenss.push(this.game.add.tween(godHeadShadow1).to({alpha: 0.5}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true));
 		this.tweenss.push(this.game.add.tween(godHeadShadow2).to({alpha: 0.5}, 3000, Phaser.Easing.Linear.InOut, true, 0, 3000, true));
+	}
+	
+	placeCrystal() {
+		if(!this.tainted){
+			var crystal = this.game.add.existing(new Phaser.Sprite(this.game, 570, 310, 'kristall_topp'));
+			var crystalGlowing = this.game.add.existing(new Phaser.Sprite(this.game, 570, 310, 'kristall_topp_glowing'));
+
+			crystal.alpha = 0;
+			crystal.scale.setTo(0.2, 0.2);
+			crystalGlowing.alpha = 0;
+			crystalGlowing.scale.setTo(0.2, 0.2);
+			
+			var tween1 = this.game.add.tween(crystal).to({alpha: 1}, 2000, Phaser.Easing.Linear.In, true);
+			var tween2 = this.game.add.tween(crystalGlowing).to({alpha: 1}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true);
+			
+			
+			this.game.time.events.add(Phaser.Timer.SECOND * 4, this.initGodHeads, this);
+			this.game.time.events.start();
+		}
 	}
 	
 }

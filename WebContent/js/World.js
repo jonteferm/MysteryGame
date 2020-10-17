@@ -8,7 +8,12 @@ class World extends Phaser.State {
 		this.activeLocationOfInterest = null;
 	}
 
-	init(params){	
+	init(params){
+		// TODO: What to do with these?
+		this.signalManager = new SignalManager(this.game, this);
+		this.spellManager = new SpellManager(this.game, this);
+		
+		
 		if(params === undefined){
 			this.areas = {
 					"area1": Area1,
@@ -22,15 +27,24 @@ class World extends Phaser.State {
 					"area5_2": Area5_2,
 					"area5_3": Area5_3,
 					"area6_0": Area6_0,
+					"area7_0": Area7_0,
+					"area7_1": Area7_1,
+					"area7_2": Area7_2,
+					"area7_3": Area7_3,
+					"area7_4": Area7_4,
+					"area7_5": Area7_5,
+					"area8_0": Area8_0,
+					"area8_1": Area8_1,
+					"area8_2": Area8_2,
 			};
 			this.dusk = false;
 			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));
 			this.effectsManager = new EffectsManager(this.game, this);
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
 			this.backgroundManager = new BackgroundManager(this);
-			this.signalManager = new SignalManager(this.game, this);
+
 			this.uiManager = new UIManager(this.game, this);
-			this.spellManager = new SpellManager(this.game, this);
+
 		}else{
 			params.directionArrows.destroy(true);
 			this.areas = params.areas;
@@ -38,14 +52,12 @@ class World extends Phaser.State {
 			this.timeManager = params.timeManager;
 			this.dusk = params.dusk;
 			this.backgroundManager = params.backgroundManager;
-			this.signalManager = params.signalManager;
+
 			this.uiManager = params.uiManager;
-			this.spellManager = params.spellManager;
+
 			
 			this.backgroundManager.context = this;
-			this.signalManager.context = this;
 			this.uiManager.context = this;
-			this.spellManager.context = this;
 		}
 		
 
@@ -77,10 +89,16 @@ class World extends Phaser.State {
 		}
 
 		this.updateArea();
+		
+
 	}
 	
 	render(){
 		this.directionArrows.bringToTop();
+		/*
+		this.area = new Phaser.Rectangle(580, 310, 80, 150);
+		this.game.debug.geom(this.area, 'rgba(200,0,0,0.5)');
+		*/
 	}
 	
 	shakeCanvas(){

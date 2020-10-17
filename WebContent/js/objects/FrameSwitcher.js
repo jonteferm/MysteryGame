@@ -27,7 +27,7 @@ class FrameSwitcher{
 			}
 	    	
 			this.activeFrame = this.game.add.image(0, 0, this.backgroundId);
-			
+
 			if(this.easing){
 	    		this.activeFrame.alpha = 0;
 	    		
@@ -64,7 +64,8 @@ class FrameSwitcher{
     		}
     	}, this);
     	
-
+		// TODO: Examine!
+		this.game.time.events.start();
 	}
 	
 	
