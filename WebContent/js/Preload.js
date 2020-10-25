@@ -24,9 +24,9 @@ class Preload extends Phaser.State {
 		// Add the next states of the game
 		//this.game.state.add("menu", Menu);
 
-		this.game.state.add("area2_0", Area2_0);
+		this.game.state.add("area7_3", Area7_3);
 		
 		//this.game.state.start("menu");
-		this.game.state.start("area2_0");
+		this.game.state.start("area7_3");
 	}
 }

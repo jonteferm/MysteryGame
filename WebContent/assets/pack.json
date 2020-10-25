@@ -577,6 +577,36 @@
       "key": "area7_5_skymning",
       "url": "assets/areas/area7/area7_5_skymning.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_high_closed_wings",
+      "url": "assets/images/korp/korp_high_closed_wings.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_high_diving",
+      "url": "assets/images/korp/korp_high_diving.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_high_open_wings",
+      "url": "assets/images/korp/korp_high_open_wings.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_4_wicked",
+      "url": "assets/areas/area7/area7_4_wicked.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area7_4_wicked_mirror",
+      "url": "assets/areas/area7/area7_4_wicked_mirror.png",
+      "overwrite": false
     }
   ],
   "area8": [
@@ -600,7 +630,7 @@
     }
   ],
   "meta": {
-    "generated": "1602944707758",
+    "generated": "1603635195115",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
