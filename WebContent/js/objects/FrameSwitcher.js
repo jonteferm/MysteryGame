@@ -9,7 +9,6 @@ class FrameSwitcher{
 		this.onEachFrame = null;
 		this.onFinished = null;
 		this.easing = false;
-		this.reapeat = false;
 		
 		this.frameTime = 1;
 		
@@ -72,8 +71,5 @@ class FrameSwitcher{
 	destroy(){
 		this.active = false;
 		this.activeFrame.destroy();
-		if(!this.repeat){
-			this.game.time.events.stop();
-		}
 	}
 }

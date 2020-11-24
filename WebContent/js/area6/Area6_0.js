@@ -50,8 +50,7 @@ class Area6_0 extends World {
 			this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
 			this.wickedness.frameTime = 3;
 			this.wickedness.easing = true;
-			this.wickedness.repeat = true;
-			
+
 			this.wickedness.onEachFrame = function(context){
 				context.backgroundManager.setTop();
 			}

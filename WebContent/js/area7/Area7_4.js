@@ -14,18 +14,13 @@ class Area7_4 extends World {
 		}
 		
 		this.directionArrows.setBorderingAreas('', '', 'area7_5', 'area7_3');
-		
-		this.wickednessFrames =  ["area7_4_wicked_mirror", "area7_4_wicked"];
-		this.wickedness = new FrameSwitcher(this.game, this.wickednessFrames, this);
-		this.wickedness.frameTime = 1;
-		this.wickedness.easing = true;
-		this.wickedness.repeat = true;
-		
-		this.wickedness.onEachFrame = function(context){
-			context.backgroundManager.setTop();
-		}
-		
-		this.wickedness.start();
+
+		this.wickedMirror = this.game.add.image(0, 0, 'area7_4_wicked_mirror');
+		this.mirrorEase = this.game.add.tween(this.wickedMirror).to({alpha: 0}, 12000, Phaser.Easing.Linear.Out, true, 1000);
+		this.mirrorEase.onComplete.add(function(){
+			//this.directionArrows.setBorderingAreas('', '', 'area7_5', 'area7_3');
+		}, this);
+
 		
 		this.game.time.events.add(Phaser.Timer.SECOND * 1, function(){
 			this.ravenDiving = this.game.add.image(660, 0, 'korp_high_diving');

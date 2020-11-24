@@ -6,8 +6,12 @@ class Area7_5 extends World {
 	}
 	
 	createArea(){
+		//this.directionArrows.setBorderingAreas('', '', 'area8_0', 'area7_4');
 		
-		this.directionArrows.setBorderingAreas('', '', 'area8_0', 'area7_4');
+		this.raven = new Raven(this.game, 400, 80);
+		this.raven.scale.setTo(2,2);
+		this.game.add.existing(this.raven);
+		this.raven.animations.play('closed', 4, true);
 
 	}
 	

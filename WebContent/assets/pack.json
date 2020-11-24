@@ -607,6 +607,40 @@
       "key": "area7_4_wicked_mirror",
       "url": "assets/areas/area7/area7_4_wicked_mirror.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_close_left_beak_closed",
+      "url": "assets/images/korp/korp_close_left_beak_closed.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_close_left_beak_open",
+      "url": "assets/images/korp/korp_close_left_beak_open.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_close_right_beak_closed",
+      "url": "assets/images/korp/korp_close_right_beak_closed.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "korp_close_right_beak_open",
+      "url": "assets/images/korp/korp_close_right_beak_open.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "korp_spritesheet",
+      "url": "assets/images/korp/korp_spritesheet.png",
+      "frameWidth": 250,
+      "frameHeight": 320,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "area8": [
@@ -630,7 +664,7 @@
     }
   ],
   "meta": {
-    "generated": "1603635195115",
+    "generated": "1606252624054",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
