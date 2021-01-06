@@ -42,7 +42,6 @@ class World extends Phaser.State {
 			this.effectsManager = new EffectsManager(this.game, this);
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
 			this.backgroundManager = new BackgroundManager(this);
-
 			this.uiManager = new UIManager(this.game, this);
 
 		}else{

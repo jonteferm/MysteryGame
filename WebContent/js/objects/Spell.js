@@ -1,8 +1,8 @@
-class Spell{
-	constructor(game, name, symbol, signal){
+class Spell {
+	constructor(game, name, formula, signal){
 		this.game = game;
 		this.name = name;
-		this.symbol = symbol;
+		this.formula = formula;
 		this.signal = signal;
 		
 		this.initVisuals();
