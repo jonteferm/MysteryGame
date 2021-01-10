@@ -8,7 +8,14 @@ class Area5_3 extends World {
 	createArea(){
 		this.directionArrows.setBorderingAreas('', '', '', 'area5_2');
 		
-		this.woman = new NPC(this.game, 0, 375, 'kvinna_standard');
+		this.cache.getJSON("conversations_ragna").forEach(function(conversation){
+			console.log(conversation);
+			if(conversation.id === "ragna_intro"){
+				this.woman = new NPC(this.game, 0, 375, 'kvinna_standard', conversation);
+			}
+		}, this);	
+		
+
 		this.woman.alpha = 0;
 		this.game.add.existing(this.woman);
 		

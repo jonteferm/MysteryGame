@@ -435,6 +435,12 @@
       "key": "inventory",
       "url": "assets/resources/inventory.json",
       "overwrite": false
+    },
+    {
+      "type": "json",
+      "key": "conversations_ragna",
+      "url": "assets/resources/conversations_ragna.json",
+      "overwrite": false
     }
   ],
   "area6": [
@@ -664,7 +670,7 @@
     }
   ],
   "meta": {
-    "generated": "1606252624054",
+    "generated": "1610300415317",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

@@ -1,0 +1,92 @@
+[{
+	"id": "ragna_intro",
+	"ended": false,
+	"linesSpoken": 0,
+	"questId": 0,
+	"lines": [{
+		"spoken": false,
+		"line":  "Oh, hey you are finally awake!",
+		"isQuestion": true,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	},
+	{
+		"spoken": false,
+		"line":  "I really enjoyed watching you sleep though...",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_hehe"
+	},
+	{
+		"spoken": false,
+		"line":  "But it's really getting dark fast these days. You can't lie around here when the sun sets!",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_omg"
+	},
+	{
+		"spoken": false,
+		"line":  "We need to find you a safe place.",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	}]
+},
+{
+	"id": "ragna_after_bird",
+	"ended": false,
+	"linesSpoken": 0,
+	"questId": 0,
+	"lines": [{
+		"spoken": false,
+		"line":  "Well, that was a fight!",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_omg"
+	},
+	{
+		"spoken": false,
+		"line":  "I'm impressed by your magic abilities...",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	},
+	{
+		"spoken": false,
+		"line":  "Oh, did I spot a subtle blush upon your face?",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_hehe"
+	},
+	{
+		"spoken": false,
+		"line":  "...",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_hehe"
+	},
+	{
+		"spoken": false,
+		"line":  "...",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_hehe"
+	},
+	{
+		"spoken": false,
+		"line":  "So anyway... Where are you heading?",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	}]
+}]
