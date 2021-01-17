@@ -94,10 +94,12 @@ class World extends Phaser.State {
 	
 	render(){
 		this.directionArrows.bringToTop();
+		
 		/*
-		this.area = new Phaser.Rectangle(580, 310, 80, 150);
+		this.area = new Phaser.Rectangle(480, 250, 200, 300);
 		this.game.debug.geom(this.area, 'rgba(200,0,0,0.5)');
 		*/
+		
 	}
 	
 	shakeCanvas(){

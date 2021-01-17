@@ -18,7 +18,6 @@ class Area5_2 extends World {
 			this.antHillGlow.alpha = 0;
 			this.antHillGlowtween = this.game.add.tween(this.antHillGlow).to({alpha: 1}, 2000, Phaser.Easing.Linear.InOut, true, 0, 2000, true);
 			
-			
 			var antSpawnPoints = [];
 			antSpawnPoints.push(new SpawnPoint(2, 150, 700, 50, -50));
 			antSpawnPoints.push(new SpawnPoint(2, 200, 700, 50, -50));

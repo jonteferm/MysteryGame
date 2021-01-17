@@ -10,13 +10,13 @@ class SpellManager{
 		this.library.push(banishingSpell);
 	}
 	
-	identify(drawing){
+	tryCast(drawing){
 		var bestMatch = {matchingGrade: 0, spell: null};
     	
     	this.library.forEach(function(spell, index){
     		var matchingGrade = this.matchSymbols(drawing, spell.formula);
     		
-    		if(matchingGrade >= 56 && matchingGrade <= 58){
+    		if(matchingGrade >= 70){
     			if(matchingGrade > bestMatch.matchingGrade){
     				bestMatch.matchingGrade = matchingGrade;
     				bestMatch.spell = spell;
@@ -24,19 +24,20 @@ class SpellManager{
     		}
     	}, this);
     	
-    	return bestMatch.spell;	
+    	
+    	if(bestMatch.spell !== null){
+    		bestMatch.spell.cast();
+    	}
 	}
 	
 	matchSymbols(drawing, formula){
-		var percentage = 0;
-		var paths = drawing.match(/\{(.*?)\}/g);
-
-		for(var i = 0; i < paths.length; i++){
-			paths[i] = "[" + paths[i] + "]";
-			if(formula.paths[i]){
-				percentage += Sketchy.shapeContextMatch(paths[i], formula.paths[i]);
-			}
-		}
+		/*
+		console.log(formula.path);
+		console.log("_________________________________");
+		console.log(drawing);
+		*/
+		
+		var percentage = Sketchy.shapeContextMatch(drawing, formula.path);
 
 		percentage = (Math.floor(percentage * 10000)/100);
 		percentage = percentage.toString().substring(0,5);

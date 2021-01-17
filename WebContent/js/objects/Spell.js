@@ -14,10 +14,9 @@ class Spell {
 		this.visual.alpha = 0;
 	}
 	
-	showVisuals(){
+	cast(){
 		this.game.add.existing(this.visual);
-	    var pentagramTween = this.game.add.tween(this.visual).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true);
-	    
+	    var pentagramTween = this.game.add.tween(this.visual).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true); 
 	    var self = this;
 	    pentagramTween.onComplete.add(function(){
 	    	self.signal.dispatch();

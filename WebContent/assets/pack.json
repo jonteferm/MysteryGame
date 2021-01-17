@@ -149,6 +149,12 @@
       "key": "transition_screen",
       "url": "assets/images/transition_screen.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "lesserbanishing_formula",
+      "url": "assets/images/lesserbanishing_formula.png",
+      "overwrite": false
     }
   ],
   "area2": [
@@ -670,7 +676,7 @@
     }
   ],
   "meta": {
-    "generated": "1610300415317",
+    "generated": "1610398036933",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

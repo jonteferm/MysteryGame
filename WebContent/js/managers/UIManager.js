@@ -106,7 +106,7 @@ class UIManager {
 			$("#drawSurface").children().remove();
 			this.drawMode = false;
 		}else{
-			this.initDrawSurface();
+			this.initDrawSurface('lesserbanishing');
 			this.drawMode = true;
 		}
 	}
@@ -115,7 +115,10 @@ class UIManager {
 		this.context.signals.proceed.dispatch();
 	}
 	
-	initDrawSurface(){
+	initDrawSurface(spellId){
+		//var visual = new Visual(this.game, this.game.world.centerX, this.game.world.centerY, spellId + "_formula");
+		//var visual.anchor.setTo(0.5, 0.5);
+
 		var drawSurface = Raphael.sketchpad("drawSurface", {
 		    width: 1280,
 		    height: 720,
@@ -136,13 +139,8 @@ class UIManager {
 	    this.game.input.keyboard.onUpCallback = function (e) {
 	        if(e.keyCode === Phaser.Keyboard.ENTER){
 			    if(e.which == 13) {
-			    	var castedSpell = context.spellManager.identify(drawing);
-			    	
+			    	context.spellManager.tryCast(drawing);
 			    	drawSurface.clear();
-	
-			    	if(castedSpell !== null){
-			    		castedSpell.showVisuals();
-			    	}
 			    }
 	        }
 	    }; 

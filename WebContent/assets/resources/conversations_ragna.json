@@ -1,5 +1,5 @@
 [{
-	"id": "ragna_intro",
+	"id": "ragna_area5_3",
 	"ended": false,
 	"linesSpoken": 0,
 	"questId": 0,
@@ -37,7 +37,7 @@
 	}]
 },
 {
-	"id": "ragna_after_bird",
+	"id": "ragna_area8_0",
 	"ended": false,
 	"linesSpoken": 0,
 	"questId": 0,
@@ -84,6 +84,58 @@
 	{
 		"spoken": false,
 		"line":  "So anyway... Where are you heading?",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	}]
+},
+{
+	"id": "ragna_area8_1",
+	"ended": false,
+	"linesSpoken": 0,
+	"questId": 0,
+	"lines": [{
+		"spoken": false,
+		"line":  "Oh, are you going to visit the stone vaettirs?",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	}]
+},
+{
+	"id": "ragna_area8_2",
+	"ended": false,
+	"linesSpoken": 0,
+	"questId": 0,
+	"lines": [{
+		"spoken": false,
+		"line":  "Do you even know their language?",
+		"isQuestion": true,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	},
+	{
+		"spoken": false,
+		"line":  "I dont...",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	},
+	{
+		"spoken": false,
+		"line":  "But, I do know where they used to live before this forest became like it is now.",
+		"isQuestion": false,
+		"isAccepted": false,
+		"isConfirmed": false,
+		"expression": "kvinna_standard"
+	},
+	{
+		"spoken": false,
+		"line":  "Some of their writing is carved in stones. I'm sure you can work something out from that.",
 		"isQuestion": false,
 		"isAccepted": false,
 		"isConfirmed": false,

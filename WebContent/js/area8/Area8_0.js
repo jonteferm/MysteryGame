@@ -9,8 +9,7 @@ class Area8_0 extends World {
 		this.directionArrows.setBorderingAreas('', '', 'area8_1', 'area7_5');
 					
 		this.cache.getJSON("conversations_ragna").forEach(function(conversation){
-			console.log(conversation);
-			if(conversation.id === "ragna_after_bird"){
+			if(conversation.id === "ragna_area8_0"){
 				this.woman = new NPC(this.game, 0, 375, 'kvinna_standard', conversation);
 			}
 		}, this);	

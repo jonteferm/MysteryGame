@@ -10,7 +10,7 @@ class Area5_3 extends World {
 		
 		this.cache.getJSON("conversations_ragna").forEach(function(conversation){
 			console.log(conversation);
-			if(conversation.id === "ragna_intro"){
+			if(conversation.id === "ragna_area5_3"){
 				this.woman = new NPC(this.game, 0, 375, 'kvinna_standard', conversation);
 			}
 		}, this);	
