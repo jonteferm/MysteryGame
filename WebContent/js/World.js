@@ -12,7 +12,7 @@ class World extends Phaser.State {
 		// TODO: What to do with these?
 		this.signalManager = new SignalManager(this.game, this);
 		this.spellManager = new SpellManager(this.game, this);
-		
+
 		
 		if(params === undefined){
 			this.areas = {
@@ -43,7 +43,6 @@ class World extends Phaser.State {
 			this.timeManager = new TimeManager(new Date('2010-10-24T17:50:00'), 18, 17);
 			this.backgroundManager = new BackgroundManager(this);
 			this.uiManager = new UIManager(this.game, this);
-
 		}else{
 			params.directionArrows.destroy(true);
 			this.areas = params.areas;
@@ -51,15 +50,12 @@ class World extends Phaser.State {
 			this.timeManager = params.timeManager;
 			this.dusk = params.dusk;
 			this.backgroundManager = params.backgroundManager;
-
 			this.uiManager = params.uiManager;
-
-			
 			this.backgroundManager.context = this;
 			this.uiManager.context = this;
+
 		}
 		
-
 		this.uiManager.initUIComponents(params);
 		this.signals = this.signalManager.signals;
 		this.spellManager.initSpells(1)
@@ -81,15 +77,12 @@ class World extends Phaser.State {
 	
 	update(){
 		this.timeManager.update();
-
 		if(!this.dusk && this.timeManager.isPastDusk()){
 			this.dusk = true;
 			this.backgroundManager.setBackground();
 		}
 
 		this.updateArea();
-		
-
 	}
 	
 	render(){

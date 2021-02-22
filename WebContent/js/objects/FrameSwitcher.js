@@ -71,5 +71,6 @@ class FrameSwitcher{
 	destroy(){
 		this.active = false;
 		this.activeFrame.destroy();
+		this.game.time.events.stop();
 	}
 }

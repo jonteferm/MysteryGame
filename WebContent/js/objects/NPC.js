@@ -3,6 +3,7 @@ class NPC extends Phaser.Sprite {
 		super(game, x, y, image);
 		this.conversations = conversation;
 		this.awaitingAnswer = null;
+		this.conversationEnded = false;
 	}
 	
 	chat(){
@@ -26,6 +27,11 @@ class NPC extends Phaser.Sprite {
 					}
 					
 					this.loadTexture(this.conversations.lines[i].expression)
+					
+					if(i == this.conversations.lines.length-1){
+						this.conversationEnded = true;
+					}
+					
 					return this.conversations.lines[i].line;
 				}
 

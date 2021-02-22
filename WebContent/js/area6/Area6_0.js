@@ -37,6 +37,7 @@ class Area6_0 extends World {
 			context.tainted = false;
 			context.backgroundManager.setBackground();
 			context.directionArrows.setBorderingAreas('', '', 'area7_0', '');
+			context.milestoneManager.setMilestoneReached("Area6_0 banished");
 
 		});
 		
@@ -55,6 +56,9 @@ class Area6_0 extends World {
 				context.backgroundManager.setTop();
 			}
 			
+		}else{
+			this.placeCrystal();
+			this.directionArrows.setBorderingAreas('', '', 'area7_0', '');
 		}
 			
 		

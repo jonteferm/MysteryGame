@@ -37,7 +37,7 @@ class TimeManager {
 	}
 	
 	setCurrentDateTime(newCurrentDateTime){
-		this.currentDateTime = newCurrentDateTime;
+		this.currentDateTime = moment(newCurrentDateTime);
 	}
 	
 	elapseTime(seconds){

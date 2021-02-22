@@ -28,6 +28,8 @@ class Area2_0 extends World {
 		this.signals.banishing.add(function(){
 			this.banishDarkPowers.happen(this);
 		}, this);
+		
+		this.timeManager.start(); //TODO: Remove later
 	}
 
 	updateArea(){

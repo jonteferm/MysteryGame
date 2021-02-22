@@ -5,7 +5,11 @@ class UIManager {
 	}
 	
 	initUIComponents(prevStateParams){
-
+		this.context.controlPanel = new ControlPanel(this.game, this.game.camera.x, this.game.camera.y+(880-160));
+		this.context.controlPanel.fixedToCamera = true;
+		this.context.keyManager = new KeyManager(this.game);
+		this.initKeyBindings(this.context.keyManager);
+		
 		this.context.inventory = new Inventory(this.game, 0, (48*4));
 		this.context.spellbook = new Spellbook(this.game, 100, 100);		
 		this.context.pendulum = new Pendulum(this.game, 750, 20);
@@ -20,12 +24,11 @@ class UIManager {
 		this.game.add.existing(this.context.krumilurBottomRight);
 		this.game.add.existing(this.context.krumilurBottomLeft);
 		
-		this.context.controlPanel = new ControlPanel(this.game, this.game.camera.x, this.game.camera.y+(880-160));
-		this.context.controlPanel.fixedToCamera = true;
-		this.context.keyManager = new KeyManager(this.game);
-		
-		
-		this.initKeyBindings(this.context.keyManager);
+		this.context.inventory.inputEnabled = true;
+		this.context.inventory.input.enableDrag();
+		this.context.inventory.scale.set(0);
+		this.game.add.existing(this.context.inventory);
+		this.context.inventory.fixedToCamera = true;
 		
 		this.context.spellbook.inputEnabled = true;
 		this.context.spellbook.input.enableDrag();
@@ -33,30 +36,20 @@ class UIManager {
 		this.game.add.existing(this.context.spellbook);
 		this.context.spellbook.fixedToCamera = true;
 	
-		this.context.inventory.inputEnabled = true;
-		this.context.inventory.input.enableDrag();
-		this.context.inventory.scale.set(0);
-		this.game.add.existing(this.context.inventory);
-		this.context.inventory.fixedToCamera = true;
-		
 		this.game.add.existing(this.context.pendulum);
 		this.context.pendulum.inputEnabled = true;
 		this.context.pendulum.input.enableDrag();
 		this.context.pendulum.fixedToCamera = true;
 		this.context.pendulum.scale.set(0);
+		
+		if(prevStateParams){
+			this.reassignOldComponents(prevStateParams);
+		}
 	}
 	
 	reassignOldComponents(params){
-
-		this.context.inventory = params.inventory;
-		this.context.spellbook = params.spellbook;		
-		this.context.pendulum = params.pendulum;
-		this.context.controlPanel = params.controlPanel;
-		this.context.keyManager = params.keyManager;
-		this.context.krumilurTopLeft = params.krumilurTopLeft;
-		this.context.krumilurTopRight = params.krumilurTopRight;
-		this.context.krumilurBottomRight = params.krumilurBottomRight;
-		this.context.krumilurBottomLeft = params.krumilurBottomLeft;
+		this.context.inventory.content = params.inventory.content;
+		this.context.inventory.load();
 	}
 	
 	initKeyBindings(keyManager){
