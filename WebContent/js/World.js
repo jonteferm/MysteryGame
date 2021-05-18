@@ -33,9 +33,10 @@ class World extends Phaser.State {
 					"area7_3": Area7_3,
 					"area7_4": Area7_4,
 					"area7_5": Area7_5,
-					"area8_0": Area8_0,
-					"area8_1": Area8_1,
-					"area8_2": Area8_2,
+					"area7_6": Area7_6,
+					"area7_7": Area7_7,
+					"area7_8": Area7_8,
+					"area7_9": Area7_9,
 			};
 			this.dusk = false;
 			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));
@@ -63,15 +64,9 @@ class World extends Phaser.State {
 	}
 	
 	create(){
-		//TODO: Utfällbar kontrollpanel 
-	
-		//this.initDrawSurface();
-	    
 	    //this.game.world.setBounds(-20, -20, game.width+20, game.height+2);	
 		this.directionArrows = new DirectionArrows(this.game, this.game.camera.x, this.game.camera.y, this.signals);
-
 		this.backgroundManager.setBackground();
-
 		this.createArea();
 	}
 	

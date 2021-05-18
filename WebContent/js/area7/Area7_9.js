@@ -1,18 +1,18 @@
-class Area8_2 extends World {
+class Area7_9 extends World {
 	constructor(){
 		super();
-		this.lightBackground = "area8_2";
+		this.lightBackground = "area7_9";
 		this.activeLocationOfInterest = null;
 	}
 	
 	createArea(){
-		if(this.milestoneManager.getMilestoneReached("Talked with Ragna 8_2")){
+		if(this.milestoneManager.getMilestoneReached("Talked with Ragna 7_9")){
 			this.setUpdatedBorderingAreas();
 		} else {
-			this.directionArrows.setBorderingAreas('', '', '', 'area8_1');
+			this.directionArrows.setBorderingAreas('', '', '', 'area7_8');
 			
 			this.cache.getJSON("conversations_ragna").forEach(function(conversation){
-				if(conversation.id === "ragna_area8_2"){
+				if(conversation.id === "ragna_area7_9"){
 					this.woman = new NPC(this.game, 0, 375, 'kvinna_standard', conversation);
 				}
 			}, this);	
@@ -30,8 +30,7 @@ class Area8_2 extends World {
 				if(!this.woman.conversationEnded){
 					this.controlPanel.addText(this.woman.chat());
 				}else{
-					this.milestoneManager.setMilestoneReached("Talked with Ragna 8_2");
-					this.setUpdatedBorderingAreas();
+					this.milestoneManager.setMilestoneReached("Talked with Ragna 7_9");
 				}
 
 			}, this);
@@ -52,8 +51,5 @@ class Area8_2 extends World {
 	
 	}
 	
-	setUpdatedBorderingAreas(){
-		this.directionArrows.setBorderingAreas('', 'area8_0', '', 'area8_1');
-	}
-	
+
 }

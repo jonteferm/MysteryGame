@@ -22,23 +22,6 @@ class Inventory extends Phaser.Sprite{
 	addItem(item){
 		this.content.push(item);
 		this.load();
-		/*
-		inventorySpace.events.onInputDown.add(function(){
-			inventorySpace.destroy();
-			statsText.destroy();
-			
-			
-			var newContent = [];
-			
-			for(var i = 0; i < this.content.length; i++){
-				if(this.content[i] !== item){
-
-					newContent.push(this.content[i]);
-				}
-			}
-			
-			this.content = newContent;
-		}, this);	*/
 	}
 	
 	containsItem(itemName){

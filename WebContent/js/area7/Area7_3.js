@@ -7,7 +7,7 @@ class Area7_3 extends World {
 	
 	createArea(){
 		
-		this.directionArrows.setBorderingAreas('', '', 'area7_4', 'area7_2');
+		this.directionArrows.setBorderingAreas('area7_4', '', '', 'area7_2');
 
 	}
 	
