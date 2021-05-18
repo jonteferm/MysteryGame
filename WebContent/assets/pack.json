@@ -667,9 +667,34 @@
       "overwrite": false
     }
   ],
-  "area8": [],
+  "area8": [
+    {
+      "type": "image",
+      "key": "area8_0",
+      "url": "assets/areas/area8/area8_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_1",
+      "url": "assets/areas/area8/area8_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_2",
+      "url": "assets/areas/area8/area8_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_3",
+      "url": "assets/areas/area8/area8_3.png",
+      "overwrite": false
+    }
+  ],
   "meta": {
-    "generated": "1621192832412",
+    "generated": "1621369083865",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

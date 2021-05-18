@@ -37,6 +37,10 @@ class World extends Phaser.State {
 					"area7_7": Area7_7,
 					"area7_8": Area7_8,
 					"area7_9": Area7_9,
+					"area8_0": Area8_0,
+					"area8_1": Area8_1,
+					"area8_2": Area8_2,
+					"area8_3": Area8_3,
 			};
 			this.dusk = false;
 			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));
