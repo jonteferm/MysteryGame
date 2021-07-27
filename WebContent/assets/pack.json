@@ -691,10 +691,126 @@
       "key": "area8_3",
       "url": "assets/areas/area8/area8_3.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_blood_1",
+      "url": "assets/areas/area8/area8_0_dark_blood_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_blood_2",
+      "url": "assets/areas/area8/area8_0_dark_blood_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_blood_3",
+      "url": "assets/areas/area8/area8_0_dark_blood_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_blood_4",
+      "url": "assets/areas/area8/area8_0_dark_blood_4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_blood_5",
+      "url": "assets/areas/area8/area8_0_dark_blood_5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area8_0_dark_normal",
+      "url": "assets/areas/area8/area8_0_dark_normal.png",
+      "overwrite": false
+    }
+  ],
+  "area9": [
+    {
+      "type": "image",
+      "key": "area9_0",
+      "url": "assets/areas/area9/area9_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_0",
+      "url": "assets/areas/area9/area9_labyrinth_0.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_1",
+      "url": "assets/areas/area9/area9_labyrinth_1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_10",
+      "url": "assets/areas/area9/area9_labyrinth_10.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_11",
+      "url": "assets/areas/area9/area9_labyrinth_11.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_2",
+      "url": "assets/areas/area9/area9_labyrinth_2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_3",
+      "url": "assets/areas/area9/area9_labyrinth_3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_4",
+      "url": "assets/areas/area9/area9_labyrinth_4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_5",
+      "url": "assets/areas/area9/area9_labyrinth_5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_6",
+      "url": "assets/areas/area9/area9_labyrinth_6.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_7",
+      "url": "assets/areas/area9/area9_labyrinth_7.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_8",
+      "url": "assets/areas/area9/area9_labyrinth_8.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "area9_labyrinth_9",
+      "url": "assets/areas/area9/area9_labyrinth_9.png",
+      "overwrite": false
     }
   ],
   "meta": {
-    "generated": "1621369083865",
+    "generated": "1627410743178",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

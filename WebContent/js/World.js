@@ -41,6 +41,19 @@ class World extends Phaser.State {
 					"area8_1": Area8_1,
 					"area8_2": Area8_2,
 					"area8_3": Area8_3,
+					"area9_0": Area9_0,
+					"area9_labyrinth_0": Area9_labyrinth_0,
+					"area9_labyrinth_1": Area9_labyrinth_1,
+					"area9_labyrinth_2": Area9_labyrinth_2,
+					"area9_labyrinth_3": Area9_labyrinth_3,
+					"area9_labyrinth_4": Area9_labyrinth_4,
+					"area9_labyrinth_5": Area9_labyrinth_5,
+					"area9_labyrinth_6": Area9_labyrinth_6,
+					"area9_labyrinth_7": Area9_labyrinth_7,
+					"area9_labyrinth_8": Area9_labyrinth_8,
+					"area9_labyrinth_9": Area9_labyrinth_9,
+					"area9_labyrinth_10": Area9_labyrinth_10,
+					"area9_labyrinth_11": Area9_labyrinth_11,
 			};
 			this.dusk = false;
 			this.milestoneManager = new MilestoneManager(this.cache.getJSON("milestones"));

@@ -16,6 +16,7 @@ class Preload extends Phaser.State {
 		this.load.pack("area6", "assets/pack.json");
 		this.load.pack("area7", "assets/pack.json");
 		this.load.pack("area8", "assets/pack.json");
+		this.load.pack("area9", "assets/pack.json");
 		this.load.pack("ui", "assets/pack.json");
 		this.load.pack("resources", "assets/pack.json");
 	}
@@ -24,9 +25,9 @@ class Preload extends Phaser.State {
 		// Add the next states of the game
 		//this.game.state.add("menu", Menu);
 
-		this.game.state.add("area1", Area1);
+		this.game.state.add("area9_0", Area9_0);
 		
 		//this.game.state.start("menu");
-		this.game.state.start("area1");
+		this.game.state.start("area9_0");
 	}
 }
